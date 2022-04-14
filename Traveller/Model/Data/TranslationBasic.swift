@@ -11,7 +11,7 @@ import Combine
 class TranslationBasic: GoogleTranslation, ObservableObject {
     
     private let languageCode = Locale.current.languageCode
-    private var key = "AIzaSyDwXAtUyiXZaFTUDnYZUPVrcRNv8QpQvqo"
+    private var key = ""
     private let urlSession = URLSession.shared
     
     func getTranslation(text: String, source: String, target: String) -> AnyPublisher<TranslationBasicResponse, APIIssue> {
