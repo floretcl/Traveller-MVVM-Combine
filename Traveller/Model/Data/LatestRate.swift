@@ -10,7 +10,7 @@ import Combine
 
 class LatestRate: ExchangeRate, ObservableObject {
     
-    private var key = "5b617fe66f18129a4ec40205"
+    private var key = ""
     private let urlSession = URLSession.shared
     
     func getCurrencyRate(sourceCurrency: String, targetCurrency: String, value: Double) -> AnyPublisher<LatestRateResponse, APIIssue> {
