@@ -11,7 +11,7 @@ import Combine
 class CurrentWeather: OpenWeather, ObservableObject {
     
     private let languageCode = Locale.current.languageCode
-    private var key = "2e2a2e047cc3b3f27af0c3a66270bad8"
+    private var key = ""
     private let urlSession = URLSession.shared
     
     func getWeather(location: UserLocation, units: Units) -> AnyPublisher<CurrentWeatherResponse, APIIssue> {
