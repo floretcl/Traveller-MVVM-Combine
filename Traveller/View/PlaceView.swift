@@ -23,26 +23,6 @@ struct PlaceView: View {
             .padding(.vertical, 10)
             .navigationTitle(place.name)
             .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                Menu(content: {
-                    Button {
-                        if units == .metric {
-                            self.units = .imperial
-                        } else {
-                            self.units = .metric
-                        }
-                    } label: {
-                        Text(units == .metric ? "Imperial units" : "Metric units")
-                    }
-                }, label: {
-                    if #available(iOS 15.0, *) {
-                        Label("Options", systemImage: "ellipsis.circle")
-                    } else {
-                        Label("Options", systemImage: "ellipsis.circle")
-                            .font(.title2)
-                    }
-                })
-            }
         }
         .background(Color("BackgroundColor"))
         .onTapGesture {
